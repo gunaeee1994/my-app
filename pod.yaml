@@ -20,12 +20,12 @@ spec:
   selector:
     matchLabels:
       app: hello 
-    template:
-      metadata:
-        labels:
-          app: hello
-      spec:
-        containers:
-          - name: hello
-            image: gunaeee1994/newimage:latest
-            imagePullPolicy: Always
+  template:
+    metadata:
+      labels:
+        app: hello
+    spec:
+      containers:
+        - name: hello
+          image: gunaeee1994/newimage:latest
+          imagePullPolicy: Always
