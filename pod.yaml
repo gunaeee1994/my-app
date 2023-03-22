@@ -5,9 +5,9 @@ metadata:
 spec:
   type: LoadBalancer
   selector:
-    app: ngnix
+    app: hello
   ports:
-    - name: httpd
+    - name: http
       protocol: TCP
       port: 80
 ---
@@ -19,13 +19,13 @@ spec:
   replicas: 3
   selector:
     matchLabels:
-      app: ngnix 
+      app: hello 
     template:
       metadata:
-      labels:
-        app: ngnix
-    spec:
-      containers:
-        - name: nginx
-          image: gunaeee1994/newimage:latest
-          imagePullPolicy: Always
+        labels:
+          app: hello
+      spec:
+        containers:
+          - name: nginx
+            image: gunaeee1994/newimage:latest
+            imagePullPolicy: Always
