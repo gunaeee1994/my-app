@@ -26,6 +26,6 @@ spec:
           app: hello
       spec:
         containers:
-          - name: nginx
+          - name: hello
             image: gunaeee1994/newimage:latest
             imagePullPolicy: Always
